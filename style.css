@@ -14,6 +14,9 @@
   --light-card: #ddd8cf;
   --text-dark: #0a1a0f;
   --muted-light: #4a5e4f;
+  --mid-green: #1c3a22;
+  --mid-green-card: #254d2e;
+  --muted-green: #a0b89a;
   --font-display: 'Bebas Neue', sans-serif;
   --font-body: 'Space Grotesk', sans-serif;
   --font-mono: 'DM Mono', monospace;
@@ -71,11 +74,9 @@ a { text-decoration: none; }
   margin-bottom: 48px;
 }
 
-/* Light section headline override */
+/* Light section headline override — s2 and s4 are dark, keep white */
 .s1 .section-headline,
-.s2 .section-headline,
 .s3 .section-headline,
-.s4 .section-headline,
 .s5 .section-headline,
 .s6 .section-headline {
   color: var(--text-dark);
@@ -309,7 +310,7 @@ a { text-decoration: none; }
 }
 
 /* ===== SECTION 2 ===== */
-.s2 { background: var(--light); }
+.s2 { background: var(--bg); }
 
 .s2-grid {
   display: grid;
@@ -319,7 +320,7 @@ a { text-decoration: none; }
 }
 
 .s2-left p {
-  color: var(--muted-light);
+  color: var(--muted);
   margin-bottom: 20px;
   max-width: 480px;
 }
@@ -341,6 +342,8 @@ a { text-decoration: none; }
 
 
 /* ===== SECTION 3 ===== */
+.s3 { background: var(--light); }
+
 .s3-headline {
   font-size: clamp(40px, 5vw, 72px);
 }
@@ -378,7 +381,7 @@ a { text-decoration: none; }
 }
 
 /* ===== SECTION 4 ===== */
-.s4 { background: var(--light); }
+.s4 { background: var(--mid-green); }
 
 .steps-grid {
   display: grid;
@@ -388,7 +391,7 @@ a { text-decoration: none; }
 }
 
 .step-card {
-  background: var(--light-card);
+  background: var(--mid-green-card);
   border-top: 2px solid var(--gold);
   padding: 36px 28px;
 }
@@ -406,12 +409,12 @@ a { text-decoration: none; }
   font-family: var(--font-display);
   font-size: 32px;
   letter-spacing: 0.02em;
-  color: var(--text-dark);
+  color: var(--white);
   margin-bottom: 16px;
 }
 
 .step-card p {
-  color: var(--muted-light);
+  color: var(--muted-green);
   font-size: 15px;
   line-height: 1.6;
 }
@@ -423,7 +426,7 @@ a { text-decoration: none; }
 }
 
 blockquote p {
-  color: var(--text-dark);
+  color: var(--white);
   font-size: 16px;
   line-height: 1.65;
   font-style: italic;
@@ -434,7 +437,7 @@ blockquote cite {
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.08em;
-  color: var(--muted-light);
+  color: var(--muted-green);
   font-style: normal;
 }
 
@@ -493,13 +496,13 @@ blockquote cite {
   gap: 16px;
   align-items: baseline;
   padding: 20px 0;
-  border-bottom: 1px solid var(--light-card);
+  border-bottom: 1px solid #c8c3ba;
   font-size: 16px;
   color: var(--text-dark);
 }
 
 .who-item:nth-child(odd) { padding-right: 40px; }
-.who-item:nth-child(even) { padding-left: 40px; border-left: 1px solid var(--light-card); }
+.who-item:nth-child(even) { padding-left: 40px; border-left: 1px solid #c8c3ba; }
 
 .arrow {
   font-family: var(--font-mono);
