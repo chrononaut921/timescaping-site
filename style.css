@@ -9,6 +9,11 @@
   --gold-dim: #8a6c2a;
   --white: #f2ede4;
   --muted: #7a8a7d;
+  --light: #f5f0e8;
+  --light-alt: #ede8df;
+  --light-card: #ddd8cf;
+  --text-dark: #0a1a0f;
+  --muted-light: #4a5e4f;
   --font-display: 'Bebas Neue', sans-serif;
   --font-body: 'Space Grotesk', sans-serif;
   --font-mono: 'DM Mono', monospace;
@@ -54,7 +59,7 @@ a { text-decoration: none; }
 }
 
 .dark-bg {
-  background: var(--bg2);
+  background: var(--light-alt);
 }
 
 .section-headline {
@@ -64,6 +69,16 @@ a { text-decoration: none; }
   letter-spacing: 0.01em;
   color: var(--white);
   margin-bottom: 48px;
+}
+
+/* Light section headline override */
+.s1 .section-headline,
+.s2 .section-headline,
+.s3 .section-headline,
+.s4 .section-headline,
+.s5 .section-headline,
+.s6 .section-headline {
+  color: var(--text-dark);
 }
 
 .border-left {
@@ -276,22 +291,26 @@ a { text-decoration: none; }
 .ticker-track .dot { color: var(--gold); padding: 0 4px; }
 
 /* ===== SECTION 1 ===== */
+.s1 { background: var(--light); }
+
 .s1-body {
   max-width: 580px;
 }
 
 .s1-body p {
-  color: var(--muted);
+  color: var(--muted-light);
   margin-bottom: 20px;
 }
 
 .s1-closing {
-  color: var(--white) !important;
+  color: var(--text-dark) !important;
   font-style: italic;
   margin-top: 32px !important;
 }
 
 /* ===== SECTION 2 ===== */
+.s2 { background: var(--light); }
+
 .s2-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -300,7 +319,7 @@ a { text-decoration: none; }
 }
 
 .s2-left p {
-  color: var(--muted);
+  color: var(--muted-light);
   margin-bottom: 20px;
   max-width: 480px;
 }
@@ -327,7 +346,7 @@ a { text-decoration: none; }
 }
 
 .s3-sub {
-  color: var(--muted);
+  color: var(--muted-light);
   max-width: 520px;
   margin-bottom: 56px;
   font-size: 16px;
@@ -341,24 +360,26 @@ a { text-decoration: none; }
 }
 
 .card {
-  background: var(--green);
+  background: var(--light-card);
   padding: 32px 28px;
 }
 
 .card p {
-  color: var(--white);
+  color: var(--text-dark);
   font-size: 15px;
   line-height: 1.6;
 }
 
 .s3-closing {
   font-style: italic;
-  color: var(--white);
+  color: var(--text-dark);
   max-width: 540px;
   font-size: 16px;
 }
 
 /* ===== SECTION 4 ===== */
+.s4 { background: var(--light); }
+
 .steps-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -367,7 +388,7 @@ a { text-decoration: none; }
 }
 
 .step-card {
-  background: var(--green);
+  background: var(--light-card);
   border-top: 2px solid var(--gold);
   padding: 36px 28px;
 }
@@ -385,12 +406,12 @@ a { text-decoration: none; }
   font-family: var(--font-display);
   font-size: 32px;
   letter-spacing: 0.02em;
-  color: var(--white);
+  color: var(--text-dark);
   margin-bottom: 16px;
 }
 
 .step-card p {
-  color: var(--muted);
+  color: var(--muted-light);
   font-size: 15px;
   line-height: 1.6;
 }
@@ -402,7 +423,7 @@ a { text-decoration: none; }
 }
 
 blockquote p {
-  color: var(--white);
+  color: var(--text-dark);
   font-size: 16px;
   line-height: 1.65;
   font-style: italic;
@@ -413,11 +434,13 @@ blockquote cite {
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.08em;
-  color: var(--muted);
+  color: var(--muted-light);
   font-style: normal;
 }
 
 /* ===== SECTION 5 ===== */
+.s5 { background: var(--light); }
+
 .s5-grid {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
@@ -431,7 +454,7 @@ blockquote cite {
 }
 
 .s5-right p {
-  color: var(--muted);
+  color: var(--muted-light);
   margin-bottom: 20px;
   max-width: 500px;
 }
@@ -439,12 +462,12 @@ blockquote cite {
 .trusted {
   margin-top: 40px;
   padding-top: 32px;
-  border-top: 1px solid var(--green);
+  border-top: 1px solid var(--light-card);
 }
 
 .trusted .label {
   margin-bottom: 12px;
-  color: var(--muted);
+  color: var(--muted-light);
 }
 
 .trusted-list {
@@ -454,7 +477,7 @@ blockquote cite {
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.1em;
-  color: var(--muted);
+  color: var(--muted-light);
   text-transform: uppercase;
 }
 
@@ -470,13 +493,13 @@ blockquote cite {
   gap: 16px;
   align-items: baseline;
   padding: 20px 0;
-  border-bottom: 1px solid var(--green);
+  border-bottom: 1px solid var(--light-card);
   font-size: 16px;
-  color: var(--white);
+  color: var(--text-dark);
 }
 
 .who-item:nth-child(odd) { padding-right: 40px; }
-.who-item:nth-child(even) { padding-left: 40px; border-left: 1px solid var(--green); }
+.who-item:nth-child(even) { padding-left: 40px; border-left: 1px solid var(--light-card); }
 
 .arrow {
   font-family: var(--font-mono);
