@@ -82,10 +82,6 @@ a { text-decoration: none; }
   color: var(--text-dark);
 }
 
-.border-left {
-  border-left: 2px solid var(--gold);
-  padding-left: 24px;
-}
 
 /* ===== BUTTONS ===== */
 .btn-primary {
@@ -373,7 +369,8 @@ a { text-decoration: none; }
 }
 
 .cards-grid .card {
-  border-left: 3px solid #d4a843;
+  border-left: 4px solid #d4a843 !important;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
 }
 
 .card p {
