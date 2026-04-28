@@ -204,7 +204,7 @@ a { text-decoration: none; }
 .hero-sub {
   font-family: var(--font-display);
   font-size: clamp(34px, 4.5vw, 62px);
-  color: #f2ede4;
+  color: #f2ede4 !important;
   line-height: 1.0;
   margin-bottom: 32px;
   letter-spacing: 0.02em;
@@ -294,8 +294,12 @@ a { text-decoration: none; }
 /* ===== SECTION 1 ===== */
 .s1 { background: var(--light); padding: 72px 0; }
 
+.s1 .section-inner {
+  max-width: 820px;
+}
+
 .s1-body {
-  max-width: 580px;
+  max-width: 100%;
 }
 
 .s1-body p {
@@ -365,8 +369,11 @@ a { text-decoration: none; }
 
 .card {
   background: var(--light-card);
-  border-left: 3px solid var(--gold);
   padding: 1.5rem;
+}
+
+.cards-grid .card {
+  border-left: 3px solid #d4a843;
 }
 
 .card p {
@@ -499,7 +506,7 @@ blockquote cite {
   display: flex;
   gap: 16px;
   align-items: baseline;
-  padding: 20px 0;
+  padding: 1.2rem 0;
   border-bottom: 1px solid #c8c3ba;
   font-size: 16px;
   color: var(--text-dark);
