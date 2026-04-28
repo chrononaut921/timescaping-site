@@ -203,8 +203,8 @@ a { text-decoration: none; }
 
 .hero-sub {
   font-family: var(--font-display);
-  font-size: clamp(22px, 3vw, 40px);
-  color: var(--muted);
+  font-size: clamp(34px, 4.5vw, 62px);
+  color: #f2ede4;
   line-height: 1.0;
   margin-bottom: 32px;
   letter-spacing: 0.02em;
@@ -292,7 +292,7 @@ a { text-decoration: none; }
 .ticker-track .dot { color: var(--gold); padding: 0 4px; }
 
 /* ===== SECTION 1 ===== */
-.s1 { background: var(--light); }
+.s1 { background: var(--light); padding: 72px 0; }
 
 .s1-body {
   max-width: 580px;
@@ -306,7 +306,8 @@ a { text-decoration: none; }
 .s1-closing {
   color: var(--text-dark) !important;
   font-style: italic;
-  margin-top: 32px !important;
+  font-size: 1.2rem;
+  margin-top: 2.5rem !important;
 }
 
 /* ===== SECTION 2 ===== */
@@ -342,7 +343,7 @@ a { text-decoration: none; }
 
 
 /* ===== SECTION 3 ===== */
-.s3 { background: var(--light); }
+.s3 { background: var(--light); padding: 72px 0; }
 
 .s3-headline {
   font-size: clamp(40px, 5vw, 72px);
@@ -364,12 +365,13 @@ a { text-decoration: none; }
 
 .card {
   background: var(--light-card);
-  padding: 32px 28px;
+  border-left: 3px solid var(--gold);
+  padding: 1.5rem;
 }
 
 .card p {
   color: var(--text-dark);
-  font-size: 15px;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -485,6 +487,8 @@ blockquote cite {
 }
 
 /* ===== SECTION 6 ===== */
+.s6 { padding: 72px 0; }
+
 .who-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
