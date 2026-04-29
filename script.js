@@ -22,13 +22,13 @@ if (s1Section) {
   const s1Observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        // Headline lines: 150ms stagger, fast (0.4s)
+        // Headline: 150ms between each line
         lines.forEach((el, i) => {
-          el.style.animation = `s1FadeUp 0.4s ease ${i * 150}ms forwards`;
+          setTimeout(() => el.classList.add('is-visible'), i * 150);
         });
         // Paragraphs: start after headline finishes, 200ms stagger
         paras.forEach((el, i) => {
-          el.style.animation = `s1FadeUp 0.5s ease ${550 + i * 200}ms forwards`;
+          setTimeout(() => el.classList.add('is-visible'), 550 + i * 200);
         });
         s1Observer.unobserve(entry.target);
       }

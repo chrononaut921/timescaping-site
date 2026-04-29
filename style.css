@@ -302,6 +302,14 @@ a { text-decoration: none; }
   opacity: 0;
 }
 
+.anim-line.is-visible {
+  animation: s1FadeUp 0.4s ease forwards;
+}
+
+.anim-para.is-visible {
+  animation: s1FadeUp 0.5s ease forwards;
+}
+
 /* ===== SECTION 1 ===== */
 .s1 { background: var(--light); padding: 72px 0; }
 
