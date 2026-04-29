@@ -141,6 +141,23 @@ a { text-decoration: none; }
   color: var(--gold);
 }
 
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-link {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #7a8a7d;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-link:hover { color: var(--gold); }
+
 .nav-cta {
   font-family: var(--font-mono);
   font-size: 12px;
@@ -677,6 +694,10 @@ blockquote cite {
   .who-grid { grid-template-columns: 1fr; }
   .who-item:nth-child(even) { padding-left: 0; border-left: none; }
   .who-item:nth-child(odd) { padding-right: 0; }
+
+  /* Nav */
+  .nav-links { gap: 16px; }
+  .nav-link { display: none; }
 
   /* Footer */
   .footer { flex-direction: column; align-items: flex-start; padding: 24px; }
