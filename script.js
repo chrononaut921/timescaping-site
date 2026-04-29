@@ -13,27 +13,29 @@ const observer = new IntersectionObserver((entries) => {
 revealEls.forEach(el => observer.observe(el));
 
 // Section 01 — staggered headline + paragraph animation
-const s1Section = document.querySelector('.s1');
+// Double rAF ensures initial hidden styles are painted before observer checks visibility
+requestAnimationFrame(() => {
+  requestAnimationFrame(() => {
+    const s1Section = document.querySelector('.s1');
+    if (s1Section) {
+      const lines = Array.from(s1Section.querySelectorAll('.anim-line'));
+      const paras = Array.from(s1Section.querySelectorAll('.anim-para'));
 
-if (s1Section) {
-  const lines = Array.from(s1Section.querySelectorAll('.anim-line'));
-  const paras = Array.from(s1Section.querySelectorAll('.anim-para'));
-
-  const s1Observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Headline: 150ms between each line
-        lines.forEach((el, i) => {
-          setTimeout(() => el.classList.add('is-visible'), i * 150);
+      const s1Observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            lines.forEach((el, i) => {
+              setTimeout(() => el.classList.add('is-visible'), i * 150);
+            });
+            paras.forEach((el, i) => {
+              setTimeout(() => el.classList.add('is-visible'), 550 + i * 200);
+            });
+            s1Observer.unobserve(entry.target);
+          }
         });
-        // Paragraphs: start after headline finishes, 200ms stagger
-        paras.forEach((el, i) => {
-          setTimeout(() => el.classList.add('is-visible'), 550 + i * 200);
-        });
-        s1Observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-  s1Observer.observe(s1Section);
-}
+      s1Observer.observe(s1Section);
+    }
+  });
+});
