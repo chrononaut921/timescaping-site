@@ -777,3 +777,128 @@ blockquote cite {
   font-size: 1rem;
   line-height: 1.65;
 }
+
+/* ===== CASE STUDY PAGES ===== */
+
+.cs-hero {
+  background: var(--bg);
+  padding: 140px 0 88px;
+}
+
+.cs-inner {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.cs-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 40px;
+  transition: color 0.2s;
+}
+.cs-back:hover { color: var(--gold); }
+
+.cs-hero-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 24px;
+}
+
+.cs-hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(52px, 7vw, 100px);
+  line-height: 0.93;
+  letter-spacing: 0.01em;
+  color: var(--white);
+  margin-bottom: 40px;
+}
+
+.cs-hero-intro {
+  font-size: 17px;
+  color: var(--white);
+  line-height: 1.7;
+  border-left: 2px solid var(--gold);
+  padding-left: 24px;
+  max-width: 580px;
+}
+
+.cs-dark  { background: var(--bg);    padding: 88px 0; }
+.cs-dark-alt { background: var(--bg2); padding: 88px 0; }
+.cs-light { background: var(--light); padding: 88px 0; }
+
+.cs-section-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 20px;
+}
+
+.cs-section-headline {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 4.5vw, 60px);
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  color: var(--white);
+  margin-bottom: 32px;
+}
+
+.cs-light .cs-section-headline {
+  color: var(--text-dark);
+}
+
+.cs-body p {
+  margin-bottom: 20px;
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.cs-dark .cs-body p,
+.cs-dark-alt .cs-body p {
+  color: var(--muted);
+}
+
+.cs-light .cs-body p {
+  color: var(--muted-light);
+}
+
+.cs-quote {
+  border-left: 2px solid var(--gold);
+  padding-left: 24px;
+  margin: 40px 0 0;
+}
+
+.cs-quote p {
+  color: var(--white) !important;
+  font-style: italic;
+  font-size: 18px !important;
+  line-height: 1.65 !important;
+  margin-bottom: 12px !important;
+}
+
+.cs-quote cite {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-style: normal;
+}
+
+@media (max-width: 900px) {
+  .cs-inner { padding: 0 24px; }
+  .cs-hero { padding: 100px 0 60px; }
+  .cs-dark, .cs-dark-alt, .cs-light { padding: 60px 0; }
+}
