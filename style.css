@@ -713,3 +713,67 @@ blockquote cite {
   .hero-ctas { flex-direction: column; align-items: flex-start; }
   .hero-ctas .btn-ghost { width: auto; }
 }
+
+/* ===== ORGANISATIONS PAGE ===== */
+
+/* Section backgrounds */
+.org-s1 { background: var(--light); padding: 72px 0; }
+.org-s2 { background: var(--bg); }
+.org-s3 { background: var(--light); padding: 72px 0; }
+.org-s4 { background: var(--mid-green); }
+.org-s5 { background: var(--light-alt); padding: 72px 0; }
+
+/* Headlines on light sections need dark text */
+.org-s1 .section-headline,
+.org-s3 .section-headline,
+.org-s5 .section-headline {
+  color: var(--text-dark);
+}
+
+/* Body text */
+.org-body {
+  max-width: 580px;
+}
+
+.org-body p {
+  color: var(--muted-light);
+  margin-bottom: 20px;
+}
+
+.org-closing {
+  color: var(--text-dark) !important;
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-top: 2rem !important;
+}
+
+/* Section 03 — testimonials on cream background */
+.org-quote {
+  border-left: 2px solid var(--gold);
+  padding-left: 24px;
+}
+
+.org-quote p {
+  color: var(--text-dark);
+  font-size: 16px;
+  line-height: 1.65;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.org-quote cite {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--muted-light);
+  font-style: normal;
+}
+
+/* Section 05 body */
+.org-who-body {
+  color: var(--muted-light);
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+  line-height: 1.65;
+}
