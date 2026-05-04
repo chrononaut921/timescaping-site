@@ -716,6 +716,11 @@ blockquote cite {
 
 /* ===== ORGANISATIONS PAGE ===== */
 
+/* Hero headline override — longer lines need smaller font */
+.org-hero-hl {
+  font-size: clamp(36px, 4.5vw, 64px);
+}
+
 /* Section backgrounds */
 .org-s1 { background: var(--light); padding: 72px 0; }
 .org-s2 { background: var(--bg); }
