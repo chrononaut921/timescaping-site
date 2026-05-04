@@ -179,6 +179,21 @@ a { text-decoration: none; }
   padding-top: 64px;
 }
 
+/* Text-only hero variant (index page) */
+.hero-text-only {
+  grid-template-columns: 1fr;
+  background: #0a1a0f;
+  align-items: center;
+}
+.hero-text-only .hero-left {
+  padding: 160px 80px 100px;
+  max-width: 1400px;
+}
+.hero-text-only .hero-headline {
+  font-size: clamp(4rem, 10vw, 9rem);
+  margin-bottom: 40px;
+}
+
 .hero-ghost {
   position: absolute;
   left: -2%;
@@ -666,6 +681,11 @@ blockquote cite {
     grid-template-rows: auto 55vw;
     min-height: auto;
   }
+  .hero-text-only {
+    grid-template-rows: auto;
+    min-height: 100vh;
+  }
+  .hero-text-only .hero-left { padding: 120px 24px 80px; }
   .hero-ghost { font-size: 40vw; top: 20%; }
   .hero-left { padding: 100px 24px 60px; }
   .hero-right { position: relative; }
