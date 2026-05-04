@@ -433,7 +433,7 @@ a { text-decoration: none; }
 
 .cards-grid .card {
   border-left: 4px solid #d4a843 !important;
-  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  padding: 16px;
 }
 
 .card p {
