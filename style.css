@@ -539,7 +539,6 @@ blockquote cite {
 
 .trusted .label {
   margin-bottom: 12px;
-  color: var(--muted-light);
 }
 
 .trusted-list {
