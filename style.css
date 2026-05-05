@@ -389,6 +389,10 @@ a { text-decoration: none; }
   max-width: 820px;
 }
 
+.s1 .section-headline {
+  font-size: clamp(28px, 3.8vw, 56px);
+}
+
 .s1-body {
   max-width: 100%;
 }
