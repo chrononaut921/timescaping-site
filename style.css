@@ -107,6 +107,20 @@ a { text-decoration: none; }
 }
 .btn-ghost:hover { color: var(--white); border-color: var(--white); }
 
+.btn-ghost-gold {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 13px 28px;
+  background: transparent;
+  margin-top: 16px;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-ghost-gold:hover { background: var(--gold); color: var(--bg); }
+
 .btn-ghost-block {
   display: block;
   font-family: var(--font-mono);
