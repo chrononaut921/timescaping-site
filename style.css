@@ -107,6 +107,14 @@ a { text-decoration: none; }
 }
 .btn-ghost:hover { color: var(--white); border-color: var(--white); }
 
+/* Hero secondary button — gold ghost */
+.hero .btn-ghost {
+  color: #d4a843;
+  border: 2px solid #d4a843;
+  background: transparent;
+}
+.hero .btn-ghost:hover { color: var(--bg); background: #d4a843; border-color: #d4a843; }
+
 .btn-ghost-gold {
   display: inline-block;
   font-family: var(--font-mono);
