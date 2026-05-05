@@ -776,12 +776,7 @@ blockquote cite {
 
 /* Hero headline override — longer lines need smaller font */
 .org-hero-hl {
-  font-size: clamp(3.5rem, 8vw, 7rem);
-}
-@media (max-width: 1024px) {
-  .org-hero-hl {
-    font-size: clamp(2.5rem, 6vw, 5rem);
-  }
+  font-size: clamp(2rem, 5vw, 4.5rem);
 }
 
 /* Section backgrounds */
