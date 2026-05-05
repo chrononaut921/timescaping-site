@@ -863,6 +863,33 @@ blockquote cite {
   margin-bottom: 8px;
 }
 
+/* Theme chips */
+.themes-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  margin-bottom: 12px;
+  margin-top: 28px;
+}
+.themes-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.theme-chip {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  background: transparent;
+  padding: 5px 12px;
+  border-radius: 2px;
+}
+
 /* Section 05 action button */
 .steps-cta {
   margin-top: 32px;
