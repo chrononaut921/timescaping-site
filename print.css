@@ -1,0 +1,7 @@
+@media print {
+  :root {
+    --font-display: 'Arial Black', 'Arial Bold', Arial, sans-serif;
+    --font-body: system-ui, -apple-system, Arial, sans-serif;
+    --font-mono: ui-monospace, 'Courier New', Courier, monospace;
+  }
+}
