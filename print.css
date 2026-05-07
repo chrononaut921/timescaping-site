@@ -1,34 +1,30 @@
 @media print {
-  /* Nuclear reset — white background, black text, no exceptions */
+  /* Force all text dark — backgrounds will default to white paper */
   * {
-    background: #fff !important;
     color: #111 !important;
-    border-color: #ccc !important;
+    background: transparent !important;
     box-shadow: none !important;
     text-shadow: none !important;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
+  }
+
+  html, body {
+    background: #fff !important;
   }
 
   /* System fonts */
   body { font-family: system-ui, -apple-system, Arial, sans-serif !important; }
   h1, h2, h3, h4 { font-family: 'Arial Black', Arial, sans-serif !important; }
-  .label, .cs-section-label, .step-num, .themes-label,
-  [style*="font-mono"], [class*="mono"] {
-    font-family: 'Courier New', Courier, monospace !important;
-  }
 
-  /* Keep gold-ish tone for labels so hierarchy is visible */
+  /* Keep a darker gold tone for labels so hierarchy is visible */
   .label, .gold, .cs-section-label, .cs-hero-label,
   .step-num, .themes-label { color: #7a5c1e !important; }
 
   /* Hide non-content elements */
   .nav, .ticker, .hero-ctas, .steps-cta,
   .btn-primary, .btn-ghost, .btn-ghost-gold,
-  .btn-ghost-block, .cs-back, footer,
-  script, style { display: none !important; }
+  .btn-ghost-block, .cs-back, footer { display: none !important; }
 
-  /* Spacing and page breaks */
+  /* Layout */
   section { page-break-inside: avoid; margin: 0 !important; padding: 24px 0 !important; }
   .section-inner, .cs-inner { max-width: 100% !important; padding: 0 24px !important; }
   img { max-width: 100% !important; height: auto !important; }
