@@ -24,6 +24,15 @@
   .btn-primary, .btn-ghost, .btn-ghost-gold,
   .btn-ghost-block, .cs-back, footer { display: none !important; }
 
+  /* Force all scroll-reveal elements visible — JS won't trigger them in print */
+  .reveal, .anim-line, .anim-para, .fade-up,
+  .reveal.visible, .is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+    transition: none !important;
+  }
+
   /* Layout */
   section { page-break-inside: avoid; margin: 0 !important; padding: 24px 0 !important; }
   .section-inner, .cs-inner { max-width: 100% !important; padding: 0 24px !important; }
