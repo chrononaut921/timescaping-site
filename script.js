@@ -1,3 +1,13 @@
+// Make everything visible before printing
+window.addEventListener('beforeprint', () => {
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+  document.querySelectorAll('.anim-line, .anim-para').forEach(el => el.classList.add('is-visible'));
+  document.querySelectorAll('.fade-up').forEach(el => {
+    el.style.opacity = '1';
+    el.style.transform = 'none';
+  });
+});
+
 // Intersection Observer for scroll reveal (all sections)
 const revealEls = document.querySelectorAll('.reveal');
 
