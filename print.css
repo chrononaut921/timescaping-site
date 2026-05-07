@@ -24,13 +24,19 @@
   .btn-primary, .btn-ghost, .btn-ghost-gold,
   .btn-ghost-block, .cs-back, footer { display: none !important; }
 
-  /* Force all scroll-reveal elements visible — JS won't trigger them in print */
-  .reveal, .anim-line, .anim-para, .fade-up,
-  .reveal.visible, .is-visible {
+  /* Kill all animations and force everything visible */
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .reveal, .reveal.visible,
+  .anim-line, .anim-line.is-visible,
+  .anim-para, .anim-para.is-visible,
+  .fade-up, .delay-1, .delay-2, .delay-3 {
     opacity: 1 !important;
     transform: none !important;
     visibility: visible !important;
-    transition: none !important;
   }
 
   /* Layout */
