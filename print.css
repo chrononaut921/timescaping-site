@@ -1,7 +1,37 @@
 @media print {
+  /* System fonts */
   :root {
     --font-display: 'Arial Black', 'Arial Bold', Arial, sans-serif;
     --font-body: system-ui, -apple-system, Arial, sans-serif;
     --font-mono: ui-monospace, 'Courier New', Courier, monospace;
   }
+
+  /* White background, dark text everywhere */
+  body, section, div, header, footer, nav,
+  .hero, .cs-hero, .cs-dark, .cs-light, .cs-dark-alt,
+  .dark-bg, .s3, .s-cta, .ticker, .trusted {
+    background: #fff !important;
+    color: #111 !important;
+  }
+
+  /* Make gold and muted text readable on white */
+  .gold, .label, .cs-section-label, .cs-hero-label,
+  .step-num, .themes-label, .arrow { color: #7a5c1e !important; }
+
+  .muted, .muted-green, [style*="color: var(--muted"] { color: #444 !important; }
+
+  /* Hide things that don't belong in a PDF */
+  .nav, .ticker, .hero-ctas, .steps-cta, .btn-primary,
+  .btn-ghost, .btn-ghost-gold, .btn-ghost-block, .cs-back,
+  footer { display: none !important; }
+
+  /* Borders */
+  .step-card { border-top: 1px solid #bbb !important; background: #f9f9f9 !important; }
+  .org-quote, .cs-quote { border-left: 2px solid #bbb !important; }
+
+  /* Theme chips */
+  .theme-chip { border: 1px solid #999 !important; color: #555 !important; }
+
+  /* Page breaks */
+  section { page-break-inside: avoid; }
 }
