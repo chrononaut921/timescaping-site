@@ -1579,3 +1579,33 @@ section[id], [id="take-part"], [id="from-2126"] { scroll-margin-top: 72px; }
 }
 .f-hero .cs-inner { max-width: 1200px; }
 .f-hero { padding-bottom: 64px; }
+
+/* Card section: themes under the deck */
+.tc-more { margin-top: 28px; max-width: 460px; text-align: center; }
+.tc-more-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.tc-themes {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+.tc-themes li {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-green);
+  border: 1px solid rgba(160,184,154,0.35);
+  padding: 5px 10px;
+}
+.tc-draw:focus { outline: none; }
+.tc-draw:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
