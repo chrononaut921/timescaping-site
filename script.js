@@ -58,11 +58,12 @@ requestAnimationFrame(() => {
   const btn = document.querySelector('.tc-draw');
   let current = 0;
 
-  function show(i) {
-    cards[current].classList.remove('is-active');
+  function show(i, animate) {
+    cards[current].classList.remove('is-active', 'is-in');
     cards[current].setAttribute('aria-hidden', 'true');
     cards[i].classList.add('is-active');
     cards[i].removeAttribute('aria-hidden');
+    if (animate) { void cards[i].offsetWidth; cards[i].classList.add('is-in'); }
     current = i;
   }
   function randomOther() {
@@ -76,7 +77,7 @@ requestAnimationFrame(() => {
   deck.setAttribute('aria-live', 'polite');
   if (btn) {
     btn.hidden = false;
-    btn.addEventListener('click', () => show(randomOther()));
+    btn.addEventListener('click', () => show(randomOther(), true));
   }
 })();
 
