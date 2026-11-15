@@ -1506,3 +1506,76 @@ section[id], [id="take-part"], [id="from-2126"] { scroll-margin-top: 72px; }
 .art-grid + .art-group { margin-top: 72px; }
 .lightbox-caption { white-space: pre-line; }
 @media (max-width: 900px) { .art-group span { display: block; margin: 6px 0 0; } }
+
+/* ===== FROM 2126 HUB ===== */
+.hub { background: var(--bg); padding: 0 0 120px; }
+.hub-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+.hub-side { display: grid; grid-template-rows: auto 1fr; gap: 24px; }
+.hub-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  border-top: 2px solid var(--gold);
+  transition: transform 0.25s ease;
+}
+.hub-panel:hover { transform: translateY(-3px); }
+.hub-panel .from-more { margin-top: 20px; }
+.hub-panel:hover .from-more { text-decoration: underline; text-underline-offset: 4px; }
+
+.hub-art { background: #1a2a1e; color: var(--white); }
+.hub-art-stack { display: grid; margin-top: 16px; }
+.hub-art-item {
+  grid-area: 1 / 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease, visibility 0s linear 0.6s;
+}
+.hub-art-item.is-active { opacity: 1; visibility: visible; transition: opacity 0.6s ease, visibility 0s; }
+.hub-art-frame { display: block; aspect-ratio: 4 / 5; background: #d9d8d4; overflow: hidden; margin-bottom: 14px; }
+.hub-art-frame img { object-fit: contain; }
+
+.hub-story { background: var(--light); color: var(--text-dark); }
+.hub-story .from-kind { color: var(--gold-dim); }
+.hub-story .from-more { color: var(--text-dark); }
+.hub-story-line {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 2.6vw, 40px);
+  line-height: 1.02;
+  letter-spacing: 0.01em;
+  margin-top: 14px;
+}
+
+.hub-posts { background: #121212; color: #d9d6cf; }
+.hub-posts .from-kind { color: #8a8478; }
+.hub-disp-stack { display: grid; margin-top: 14px; }
+.hub-disp { grid-area: 1 / 1; padding: 0; background: transparent; visibility: hidden; }
+.hub-disp.is-active { visibility: visible; }
+
+/* Also from 2126 */
+.also { background: var(--bg2); padding: 64px 0; }
+.also-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.also-link {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid var(--gold);
+  padding-top: 16px;
+  color: var(--white);
+}
+.also-title { font-family: var(--font-display); font-size: 34px; line-height: 1; letter-spacing: 0.01em; }
+.also-link:hover .also-title { color: var(--gold); }
+
+@media (max-width: 900px) {
+  .hub-grid, .also-grid { grid-template-columns: 1fr; }
+  .hub { padding-bottom: 72px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hub-panel, .hub-art-item { transition: none; }
+  .hub-panel:hover { transform: none; }
+}
+.f-hero .cs-inner { max-width: 1200px; }
+.f-hero { padding-bottom: 64px; }

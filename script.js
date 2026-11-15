@@ -117,3 +117,30 @@ requestAnimationFrame(() => {
   dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close(); });
   dialog.addEventListener('close', () => { img.src = ''; if (opener) opener.focus(); });
 })();
+
+// From 2126 hub: a different object and message on each visit; objects change slowly
+(function () {
+  function pick(sel) {
+    const items = Array.from(document.querySelectorAll(sel));
+    if (items.length < 2) return null;
+    let current = Math.floor(Math.random() * items.length);
+    items.forEach((el, i) => el.classList.toggle('is-active', i === current));
+    return {
+      next() {
+        items[current].classList.remove('is-active');
+        current = (current + 1) % items.length;
+        items[current].classList.add('is-active');
+      }
+    };
+  }
+  const arts = pick('.hub-art-item');
+  pick('.hub-disp');
+  const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const panel = document.querySelector('.hub-art');
+  if (arts && !still && panel) {
+    let paused = false;
+    panel.addEventListener('mouseenter', () => { paused = true; });
+    panel.addEventListener('mouseleave', () => { paused = false; });
+    setInterval(() => { if (!paused && !document.hidden) arts.next(); }, 5000);
+  }
+})();

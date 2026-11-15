@@ -31,6 +31,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://timescaping.nl/nineteen-sols</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://timescaping.nl/artefacts</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://timescaping.nl/posting-from-the-future</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
