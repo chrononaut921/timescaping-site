@@ -1407,7 +1407,7 @@ section[id], [id="take-part"], [id="from-2126"] { scroll-margin-top: 72px; }
   max-height: 72vh;
   object-fit: contain;
 }
-.lightbox figcaption { max-width: 640px; margin-top: 18px; text-align: center; }
+.lightbox figcaption { max-width: 640px; margin-top: 18px; text-align: left; align-self: center; }
 .lightbox-title {
   display: block;
   font-family: var(--font-display);
@@ -1489,3 +1489,20 @@ section[id], [id="take-part"], [id="from-2126"] { scroll-margin-top: 72px; }
   .from-img img, .art-frame img { transition: none; }
   .from-tile:hover .from-img img, .art-link:hover .art-frame img { transform: none; }
 }
+
+/* Artefact groups and spec captions */
+.art-group {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border-top: 1px solid rgba(212,168,67,0.3);
+  padding-top: 16px;
+  margin: 8px 0 28px;
+}
+.art-group span { color: var(--muted); margin-left: 12px; letter-spacing: 0.06em; }
+.art-grid + .art-group { margin-top: 72px; }
+.lightbox-caption { white-space: pre-line; }
+@media (max-width: 900px) { .art-group span { display: block; margin: 6px 0 0; } }
