@@ -1609,3 +1609,11 @@ section[id], [id="take-part"], [id="from-2126"] { scroll-margin-top: 72px; }
 }
 .tc-draw:focus { outline: none; }
 .tc-draw:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.f-nuance {
+  max-width: 580px;
+  margin-top: 20px;
+  padding-left: 26px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
