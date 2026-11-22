@@ -1646,3 +1646,76 @@ section[id], [id="take-part"], [id="from-2126"] { scroll-margin-top: 72px; }
   color: var(--muted);
 }
 @media (max-width: 900px) { .quote-band { padding: 64px 0; } }
+
+/* ===== TIMESCAPING LIVE HOME (Nov 2026) ===== */
+.hero-live { min-height: auto; }
+.hero-live .hero-left { padding: 140px 60px 64px; max-width: 1320px; margin: 0 auto; width: 100%; }
+.hero-text-only .live-headline {
+  font-size: clamp(2.8rem, 5.6vw, 5.8rem);
+  line-height: 0.98;
+  max-width: 1150px;
+  margin-bottom: 44px;
+}
+
+/* What if / then what trailer */
+.wi { background: var(--bg2); border-top: 1px solid #1f3326; border-bottom: 1px solid #1f3326; padding: 30px 0; }
+.wi-inner { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 32px; align-items: end; }
+.wi-line { font-size: 21px; line-height: 1.45; color: var(--white); min-height: 1.45em; }
+.wi-line2 { font-size: 17px; color: #cfc6b2; margin-top: 4px; }
+.wi-line3 { margin-top: 10px; }
+.wi.js .wi-line2, .wi.js .wi-line3 { opacity: 0; transition: opacity 0.4s ease; }
+.wi.js .wi-line2.on, .wi.js .wi-line3.on { opacity: 1; }
+.wi-k { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.06em; margin-right: 6px; }
+.wi-k1 { color: var(--gold); }
+.wi-k2 { color: var(--muted-green); }
+.wi-q { font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.04em; color: var(--gold); }
+.wi-cursor { display: inline-block; width: 0.55em; height: 1em; margin-left: 6px; vertical-align: -2px; background: var(--gold); animation: wi-blink 1.1s steps(1) infinite; }
+@keyframes wi-blink { 50% { opacity: 0; } }
+.wi-controls { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+.wi-see { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.06em; color: var(--gold); text-decoration: underline; text-underline-offset: 4px; white-space: nowrap; }
+.wi-see:hover { color: var(--white); }
+.wi-pause { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; color: var(--muted); background: transparent; border: 1px solid #2c4433; padding: 4px 12px; cursor: pointer; }
+.wi-pause:hover { color: var(--white); border-color: var(--muted); }
+.wi-see:focus-visible, .wi-pause:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.tc.is-hit { box-shadow: 0 0 0 3px var(--gold), 0 18px 50px rgba(0,0,0,0.45); transition: box-shadow 0.3s; }
+
+/* Need, bridge, what happens */
+.need-text { font-size: clamp(20px, 2.1vw, 26px); line-height: 1.55; color: var(--text-dark); }
+.bridge-text { font-size: clamp(30px, 3.8vw, 54px); line-height: 1.04; margin-bottom: 0; }
+.s2-left .s2-success { color: var(--white); border-left: 2px solid var(--gold); padding-left: 18px; }
+
+/* What people say */
+.live-quote { padding: 96px 0; }
+.live-blockquote { max-width: 860px; margin: 0 auto; text-align: center; }
+.live-blockquote p { font-size: clamp(22px, 2.5vw, 32px); line-height: 1.4; margin-bottom: 20px; }
+
+/* Host */
+.s5-right .btn-dark-ghost { margin-top: 12px; }
+
+/* Plan and waitlist */
+.plan { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-bottom: 48px; }
+.plan-step { background: var(--light); border-top: 2px solid var(--gold); padding: 32px 28px; }
+.plan-num { display: block; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.15em; color: var(--gold-dim); margin-bottom: 12px; }
+.plan-title { font-family: var(--font-display); font-size: 34px; line-height: 1; letter-spacing: 0.02em; color: var(--text-dark); margin-bottom: 12px; }
+.plan-step p { color: var(--muted-light); font-size: 16px; }
+.plan-cta { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.plan-where { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted-light); }
+
+/* About page */
+.s-about-top { padding-top: 170px; padding-bottom: 72px; }
+.about-lede { color: var(--muted); max-width: 640px; font-size: 19px; }
+.s-trusted { background: var(--light); padding: 72px 0; }
+.s-trusted .trusted { margin-top: 0; padding-top: 0; border-top: 0; }
+
+@media (max-width: 900px) {
+  .hero-live .hero-left { padding: 112px 24px 48px; }
+  .wi-inner { grid-template-columns: 1fr; gap: 18px; }
+  .wi-controls { flex-direction: row; align-items: center; justify-content: space-between; }
+  .wi-line { font-size: 18px; }
+  .wi-line2 { font-size: 16px; }
+  .plan { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wi-cursor { animation: none; }
+  .wi.js .wi-line2, .wi.js .wi-line3 { transition: none; }
+}

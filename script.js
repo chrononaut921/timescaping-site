@@ -59,7 +59,7 @@ requestAnimationFrame(() => {
   let current = 0;
 
   function show(i, animate) {
-    cards[current].classList.remove('is-active', 'is-in');
+    cards[current].classList.remove('is-active', 'is-in', 'is-hit');
     cards[current].setAttribute('aria-hidden', 'true');
     cards[i].classList.add('is-active');
     cards[i].removeAttribute('aria-hidden');
@@ -79,6 +79,86 @@ requestAnimationFrame(() => {
     btn.hidden = false;
     btn.addEventListener('click', () => show(randomOther(), true));
   }
+  // used by the what-if trailer: draw a specific card and mark it
+  window.tsDrawCard = function (i) {
+    if (!cards[i]) return;
+    if (i !== current) show(i, true);
+    cards[i].classList.add('is-hit');
+    setTimeout(() => cards[i].classList.remove('is-hit'), 1600);
+  };
+})();
+
+// What if / then what trailer: rotates through the card pairs, first pair fixed, never two tech cards in a row
+(function () {
+  const box = document.querySelector('.wi');
+  const deck = document.querySelector('.tc-deck');
+  if (!box || !deck) return;
+  const cards = Array.from(deck.querySelectorAll('.tc'));
+  if (cards.length < 2 || !cards[0].dataset.if) return;
+  const A = box.querySelector('.wi-a'), B = box.querySelector('.wi-b');
+  const L2 = box.querySelector('.wi-line2'), L3 = box.querySelector('.wi-line3');
+  const see = box.querySelector('.wi-see'), btn = box.querySelector('.wi-pause');
+  const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const GLYPHS = '·:/_<>=+*01';
+  let cur = 0, timers = [], paused = false, hold = false;
+
+  function later(f, ms) { timers.push(setTimeout(f, ms)); }
+  function clear() { timers.forEach(clearTimeout); timers = []; }
+  function scramble(el, txt) {
+    if (still) { el.textContent = txt; return; }
+    const t0 = performance.now(), ms = 450;
+    (function step(now) {
+      const p = Math.min(1, (now - t0) / ms), n = Math.floor(p * txt.length);
+      let s = txt.slice(0, n);
+      for (let j = n; j < txt.length && j < n + 10; j++) s += txt[j] === ' ' ? ' ' : GLYPHS[Math.floor(Math.random() * GLYPHS.length)];
+      el.textContent = p < 1 ? s : txt;
+      if (p < 1) requestAnimationFrame(step);
+    })(t0);
+  }
+  function isTech(i) { return cards[i].dataset.tech === '1'; }
+  function nextIndex() {
+    let i, tries = 0;
+    do { i = Math.floor(Math.random() * cards.length); tries++; }
+    while ((i === cur || (isTech(i) && isTech(cur))) && tries < 60);
+    return i;
+  }
+  function schedule() {
+    later(() => { if (!paused && !hold && !document.hidden) show(nextIndex()); else schedule(); }, still ? 9000 : 7000);
+  }
+  function show(i) {
+    clear();
+    cur = i;
+    const c = cards[i];
+    L2.classList.remove('on'); L3.classList.remove('on');
+    B.textContent = '';
+    scramble(A, c.dataset.if);
+    later(() => { L2.classList.add('on'); scramble(B, c.dataset.then); }, still ? 0 : 1300);
+    later(() => L3.classList.add('on'), still ? 0 : 2600);
+    schedule();
+  }
+
+  box.classList.add('js');
+  L2.classList.add('on'); L3.classList.add('on');
+  schedule();
+
+  box.addEventListener('mouseenter', () => { hold = true; });
+  box.addEventListener('mouseleave', () => { hold = false; });
+  box.addEventListener('focusin', () => { hold = true; });
+  box.addEventListener('focusout', () => { hold = false; });
+  if (btn) {
+    btn.hidden = false;
+    btn.setAttribute('aria-pressed', 'false');
+    btn.addEventListener('click', () => {
+      paused = !paused;
+      btn.textContent = paused ? 'Play' : 'Pause';
+      btn.setAttribute('aria-pressed', String(paused));
+    });
+  }
+  if (see) see.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (window.tsDrawCard) window.tsDrawCard(cur);
+    document.getElementById('card').scrollIntoView({ behavior: still ? 'auto' : 'smooth', block: 'center' });
+  });
 })();
 
 // Artefacts lightbox (from-2126 page)
