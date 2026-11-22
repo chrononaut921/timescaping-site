@@ -1748,3 +1748,10 @@ section[id], [id="take-part"], [id="from-2126"] { scroll-margin-top: 72px; }
   .gallery-track { padding: 0 24px; scroll-padding: 0 24px; }
   .gallery-item { height: 260px; }
 }
+
+/* Nov 22 revisions */
+.need-headline { font-size: clamp(40px, 4.6vw, 64px); margin-bottom: 28px; }
+.need-text { margin-bottom: 18px; }
+.need-last { color: var(--muted-light); font-style: italic; margin-bottom: 0; }
+.need-bridge { margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--light-card); font-size: clamp(19px, 1.9vw, 23px); line-height: 1.5; color: var(--text-dark); font-weight: 500; }
+.s-card-left .s-card-intro + .s-card-intro { margin-top: 16px; }
