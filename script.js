@@ -224,3 +224,15 @@ requestAnimationFrame(() => {
     setInterval(() => { if (!paused && !document.hidden) arts.next(); }, 5000);
   }
 })();
+
+// Session photo strip: arrow buttons scroll by most of a screen
+(function () {
+  const track = document.querySelector('.gallery-track');
+  const btns = document.querySelector('.gallery-btns');
+  if (!track || !btns) return;
+  btns.hidden = false;
+  const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  btns.querySelectorAll('.gallery-btn').forEach(b => b.addEventListener('click', () => {
+    track.scrollBy({ left: Number(b.dataset.dir) * track.clientWidth * 0.75, behavior: still ? 'auto' : 'smooth' });
+  }));
+})();
