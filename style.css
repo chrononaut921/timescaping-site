@@ -1764,3 +1764,9 @@ section[id], [id="take-part"], [id="from-2126"] { scroll-margin-top: 72px; }
 .happens-text .happens-lead { color: var(--white); font-size: clamp(20px, 2vw, 25px); line-height: 1.5; margin-bottom: 24px; }
 .happens-text .s2-success { font-size: 18px; margin-top: 36px; color: var(--muted-green); }
 .cta-bridge { font-size: clamp(18px, 1.8vw, 22px); line-height: 1.55; color: var(--muted-green); max-width: 680px; margin: 0 auto 40px; text-align: center; }
+.hero-text-only .live-headline { font-size: clamp(3.4rem, 8vw, 8rem); line-height: 0.92; max-width: 1100px; margin-bottom: 28px; }
+.hero-kicker { margin-bottom: 20px; letter-spacing: 0.16em; }
+.hero-def { font-size: clamp(18px, 1.7vw, 22px); line-height: 1.5; color: var(--white); max-width: 620px; border-left: 2px solid var(--gold); padding-left: 20px; margin-bottom: 40px; }
+.hero-live .hero-left { max-width: 1200px; padding-left: 60px; padding-right: 60px; }
+@media (max-width: 900px) { .hero-live .hero-left { padding-left: 24px; padding-right: 24px; } }
+.wi { background: #0a1a0f; border-top: 1px solid rgba(212,168,67,0.35); border-bottom: 0; padding: 34px 0 44px; }
