@@ -2020,3 +2020,11 @@ section[id], [id="take-part"], [id="from-2126"] { scroll-margin-top: 72px; }
 .f-hero .f-nuance + .f-nuance { margin-top: 14px; }
 .f-collection { color: var(--white); }
 .f-sign { display: block; margin-top: 10px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; color: var(--gold); }
+
+/* About: next step */
+.s-about-next { background: var(--bg); padding: 64px 0; }
+.s-about-next .section-inner { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+.about-next-link { font-family: var(--font-mono); font-size: 13px; color: var(--gold); text-decoration: underline; text-underline-offset: 4px; }
+/* nav: the participant action is the button */
+.nav-cta { white-space: nowrap; }
+@media (max-width: 900px) { .nav-links .nav-link { display: none; } }
