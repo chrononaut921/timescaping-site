@@ -58,7 +58,42 @@ requestAnimationFrame(() => {
   const btn = document.querySelector('.tc-draw');
   let current = 0;
 
+  function setFace(card, flipped) {
+    card.classList.toggle('is-flipped', flipped);
+    const front = card.querySelector('.tc-front'), back = card.querySelector('.tc-back');
+    if (!front || !back) return;
+    front.setAttribute('aria-hidden', String(flipped));
+    back.setAttribute('aria-hidden', String(!flipped));
+    const f = front.querySelector('.tc-flip'), u = back.querySelector('.tc-unflip');
+    if (f) { f.setAttribute('aria-expanded', String(flipped)); f.tabIndex = flipped ? -1 : 0; }
+    if (u) u.tabIndex = flipped ? 0 : -1;
+  }
+  const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function turn(card, flipped) {
+    if (still) { setFace(card, flipped); focusFace(card, flipped); return; }
+    card.classList.remove('turn-in');
+    card.classList.add('turn-out');
+    setTimeout(() => {
+      card.classList.remove('turn-out');
+      setFace(card, flipped);
+      void card.offsetWidth;
+      card.classList.add('turn-in');
+      focusFace(card, flipped);
+    }, 180);
+  }
+  function focusFace(card, flipped) {
+    const el = card.querySelector(flipped ? '.tc-unflip' : '.tc-flip');
+    if (el) el.focus({ preventScroll: true });
+  }
+  cards.forEach(card => {
+    setFace(card, false);
+    const f = card.querySelector('.tc-flip'), u = card.querySelector('.tc-unflip');
+    if (f) f.addEventListener('click', () => turn(card, true));
+    if (u) u.addEventListener('click', () => turn(card, false));
+  });
+
   function show(i, animate) {
+    setFace(cards[i], false);
     cards[current].classList.remove('is-active', 'is-in', 'is-hit');
     cards[current].setAttribute('aria-hidden', 'true');
     cards[i].classList.add('is-active');

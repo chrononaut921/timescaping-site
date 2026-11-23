@@ -1881,3 +1881,25 @@ section[id], [id="take-part"], [id="from-2126"] { scroll-margin-top: 72px; }
 .wi-stage .wi-line2 { min-height: 0; }
 .wi-stage .wi-line3 { margin-top: 18px; }
 .wi-stage .wi-controls { margin-top: 20px; }
+
+/* Card with a front (the question) and a back (the whole card) */
+.tc { display: grid; }
+.tc-front, .tc-back { grid-area: 1 / 1; display: flex; flex-direction: column; min-height: 0; }
+.tc-back { visibility: hidden; }
+.tc.is-flipped .tc-front { visibility: hidden; }
+.tc.is-flipped .tc-back { visibility: visible; }
+.tc-front .tc-title { font-size: 6.4cqi; color: var(--gold-dim); margin-bottom: 0; }
+.tc-if { font-family: var(--font-display); font-size: 12.5cqi; line-height: 0.96; letter-spacing: 0.01em; margin-top: auto; }
+.tc-if span { color: var(--gold-dim); }
+.tc-then { font-size: max(13px, 4.6cqi); line-height: 1.4; color: #2b3a2f; margin-top: 5cqi; }
+.tc-then span { color: var(--gold-dim); }
+.tc-and { font-family: var(--font-mono); font-size: max(11px, 3.4cqi); color: var(--gold-dim); margin-top: 5cqi; }
+.tc-flip, .tc-unflip { align-self: flex-start; margin-top: auto; background: none; border: 0; padding: 4cqi 0 0; font-family: var(--font-mono); font-size: max(11px, 3.1cqi); letter-spacing: 0.04em; color: var(--text-dark); text-decoration: underline; text-underline-offset: 4px; cursor: pointer; position: relative; z-index: 2; }
+.tc-unflip { padding-top: 3cqi; margin-top: 3cqi; }
+.tc-flip:hover, .tc-unflip:hover { color: var(--gold-dim); }
+.tc-flip:focus-visible, .tc-unflip:focus-visible { outline: 2px solid var(--gold-dim); outline-offset: 3px; }
+.tc.turn-out { animation: tc-turn-out 0.18s ease-in forwards; }
+.tc.turn-in { animation: tc-turn-in 0.22s ease-out; }
+@keyframes tc-turn-out { to { transform: rotateY(90deg); } }
+@keyframes tc-turn-in { from { transform: rotateY(-90deg); } to { transform: none; } }
+@media (prefers-reduced-motion: reduce) { .tc.turn-out, .tc.turn-in { animation: none; } }
