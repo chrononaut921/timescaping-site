@@ -2015,3 +2015,8 @@ section[id], [id="take-part"], [id="from-2126"] { scroll-margin-top: 72px; }
   .arc-tag-today { transform: translate(470px, 6px); }
   .arc-tag-top { transform: translate(0, -6px); }
 }
+
+/* From 2126 intro: the artistic side */
+.f-hero .f-nuance + .f-nuance { margin-top: 14px; }
+.f-collection { color: var(--white); }
+.f-sign { display: block; margin-top: 10px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; color: var(--gold); }
