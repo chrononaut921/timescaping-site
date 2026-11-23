@@ -2028,3 +2028,7 @@ section[id], [id="take-part"], [id="from-2126"] { scroll-margin-top: 72px; }
 /* nav: the participant action is the button */
 .nav-cta { white-space: nowrap; }
 @media (max-width: 900px) { .nav-links .nav-link { display: none; } }
+
+/* Session payoff line under the arc (23 Nov) */
+.arc-payoff { max-width: 640px; margin: 56px 0 0; padding-left: 18px; border-left: 2px solid var(--gold); font-size: 21px; line-height: 1.5; color: var(--text-dark); }
+@media (max-width: 720px) { .arc-payoff { margin-top: 40px; font-size: 18px; } }
