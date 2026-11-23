@@ -1903,3 +1903,15 @@ section[id], [id="take-part"], [id="from-2126"] { scroll-margin-top: 72px; }
 @keyframes tc-turn-out { to { transform: rotateY(90deg); } }
 @keyframes tc-turn-in { from { transform: rotateY(-90deg); } to { transform: none; } }
 @media (prefers-reduced-motion: reduce) { .tc.turn-out, .tc.turn-in { animation: none; } }
+
+/* Feedback round, 23 Nov */
+.hero-def { border-left: 2px solid var(--gold); padding-left: 20px; }
+.need-headline .gold-dim { color: #a9811f; }
+.gallery-nav { justify-content: flex-end; }
+.tc.is-in { animation: tc-deal 0.42s cubic-bezier(.2,.7,.2,1); }
+@keyframes tc-deal {
+  from { transform: translate(46px, 18px) rotate(5deg); opacity: 0; }
+  60% { opacity: 1; }
+  to { transform: none; opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) { .tc.is-in { animation: none; } }
