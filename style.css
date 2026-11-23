@@ -1992,3 +1992,4 @@ section[id], [id="take-part"], [id="from-2126"] { scroll-margin-top: 72px; }
   .tc.is-active.is-flipped .tc-back { visibility: visible; }
   .tc.is-active.is-flipped .tc-front { visibility: hidden; }
 }
+.happens-lead mark { background: none; color: var(--gold); }
