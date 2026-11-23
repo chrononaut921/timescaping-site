@@ -105,7 +105,7 @@
       <div class="happens-text">
         <p class="happens-lead">So you can ask “what if”, and “then what”, and “then what”, explore freely, and hear how differently others imagine 2126.</p>
         <p class="happens-lead">Hosted by Cristian Boscheri, artist and performer, and guided by detailed scenario cards, you take a break from the present and surprise yourself with thoughts you never had before, in an atmosphere both playful and serious.</p>
-        <p class="s2-success">People often leave feeling energised and connected, with questions about today they didn’t arrive with.</p>
+        <blockquote class="happens-quote"><p>“Even two weeks later, I still find myself reflecting on the conversations we had. They really stayed with me.”</p><cite>Eva Beunk, composer and educator</cite></blockquote>
       </div>
     </div>
     <div class="gallery" aria-label="Photos from Timescaping sessions">
@@ -142,7 +142,6 @@
         <span class="label gold">A Timescape card</span>
         <h2 class="section-headline">STEP INTO ONE<br><span class="gold">POSSIBLE FUTURE.</span></h2>
         <p class="s-card-intro">Each card puts you in a world a hundred years from now, presented as ordinary, with one specific change in how things are arranged. Then comes a scene, close enough to film. It ends with a question that can’t be answered with yes or no, and hands the rest of the story to whoever holds the card.</p>
-        <p class="s-card-intro">Some cards challenge the idea that AI will decide everything. Many have no AI in them at all, and are about love, family, raising children and how we feel. Draw one.</p>
       </div>
       <div class="s-card-right">
         <div class="tc-deck" aria-live="polite">
@@ -675,24 +674,15 @@
       <h2 class="section-headline">HOW A SESSION GOES</h2>
       <p class="arc-sub">About two hours, from today to 2126 and back.</p>
       <div class="arc">
-        <svg class="arc-svg" viewBox="0 0 1000 250" aria-hidden="true">
+        <svg class="arc-svg" viewBox="0 0 1000 250" role="group" aria-label="The arc of a session">
           <line class="arc-guide" x1="0" y1="60" x2="1000" y2="60"/><text class="arc-tag" x="0" y="44">2126</text>
           <line class="arc-guide" x1="0" y1="200" x2="1000" y2="200"/><text class="arc-tag" x="0" y="236">Today</text>
           <path class="arc-path" pathLength="1" d="M20 200 H220 C270 200 270 60 330 60 H760 C820 60 820 200 880 200 H980"/>
-          <g class="arc-dot" style="--d:0"><circle cx="70" cy="200" r="15"/><text x="70" y="205">1</text></g><g class="arc-dot" style="--d:1"><circle cx="170" cy="200" r="15"/><text x="170" y="205">2</text></g><g class="arc-dot" style="--d:2"><circle cx="330" cy="60" r="15"/><text x="330" y="65">3</text></g><g class="arc-dot" style="--d:3"><circle cx="500" cy="60" r="15"/><text x="500" y="65">4</text></g><g class="arc-dot" style="--d:4"><circle cx="670" cy="60" r="15"/><text x="670" y="65">5</text></g><g class="arc-dot" style="--d:5"><circle cx="900" cy="200" r="15"/><text x="900" y="205">6</text></g>
+          <g class="arc-dot" style="--d:0" data-step="0" tabindex="0" role="button" aria-label="Step 1, Arrive"><circle cx="70" cy="200" r="15"/><text x="70" y="205">1</text></g><g class="arc-dot" style="--d:1" data-step="1" tabindex="0" role="button" aria-label="Step 2, Warm up"><circle cx="170" cy="200" r="15"/><text x="170" y="205">2</text></g><g class="arc-dot" style="--d:2" data-step="2" tabindex="0" role="button" aria-label="Step 3, Step into 2126"><circle cx="330" cy="60" r="15"/><text x="330" y="65">3</text></g><g class="arc-dot" style="--d:3" data-step="3" tabindex="0" role="button" aria-label="Step 4, Explore"><circle cx="500" cy="60" r="15"/><text x="500" y="65">4</text></g><g class="arc-dot" style="--d:4" data-step="4" tabindex="0" role="button" aria-label="Step 5, Create"><circle cx="670" cy="60" r="15"/><text x="670" y="65">5</text></g><g class="arc-dot" style="--d:5" data-step="5" tabindex="0" role="button" aria-label="Step 6, Come back"><circle cx="900" cy="200" r="15"/><text x="900" y="205">6</text></g>
         </svg>
-        <ol class="arc-steps"><li><span class="arc-n">1</span><h3>Arrive</h3><p>Meet the others, and why a hundred years.</p></li><li><span class="arc-n">2</span><h3>Warm up</h3><p>First thoughts about 2126, from where we are today.</p></li><li><span class="arc-n">3</span><h3>Step into 2126</h3><p>From here on, we speak as people living there.</p></li><li><span class="arc-n">4</span><h3>Explore</h3><p>In pairs. One reads a card aloud, the other answers from inside it.</p></li><li><span class="arc-n">5</span><h3>Write</h3><p>Small groups write their own card, on a theme that matters to them.</p></li><li><span class="arc-n">6</span><h3>Come back</h3><p>What shifted, and what it says about today.</p></li></ol>
+        <div class="arc-caption" aria-live="polite" hidden></div>
+        <ol class="arc-steps"><li><span class="arc-n">1</span><h3>Arrive</h3><p>Meet the others, and why a hundred years.</p></li><li><span class="arc-n">2</span><h3>Warm up</h3><p>First thoughts about 2126, from where we are today.</p></li><li><span class="arc-n">3</span><h3>Step into 2126</h3><p>From here on, we speak as people living there.</p></li><li><span class="arc-n">4</span><h3>Explore</h3><p>One reads a card aloud, the other answers from inside it.</p></li><li><span class="arc-n">5</span><h3>Create</h3><p>Make your own card, on a theme that matters to you.</p></li><li><span class="arc-n">6</span><h3>Come back</h3><p>What shifted, and what it says about today.</p></li></ol>
       </div>
-    </div>
-  </section>
-
-  <!-- WHAT PEOPLE SAY -->
-  <section class="section s4 live-quote">
-    <div class="section-inner reveal">
-      <blockquote class="border-left live-blockquote">
-        <p>“Even two weeks later, I still find myself reflecting on the conversations we had. They really stayed with me.”</p>
-        <cite>Eva Beunk, composer and educator</cite>
-      </blockquote>
     </div>
   </section>
 

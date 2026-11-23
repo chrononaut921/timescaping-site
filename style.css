@@ -1951,3 +1951,44 @@ section[id], [id="take-part"], [id="from-2126"] { scroll-margin-top: 72px; }
   .arc-guide { stroke-width: 2; }
 }
 @media (max-width: 900px) { .arc-tag { display: none; } }
+
+/* Real 3D flip for "Read the whole card" */
+.tc { transform-style: preserve-3d; transition: transform 0.6s cubic-bezier(.3,.7,.2,1); }
+.tc-front, .tc-back { backface-visibility: hidden; -webkit-backface-visibility: hidden; visibility: visible; }
+.tc-back { transform: rotateY(180deg); }
+.tc.is-flipped { transform: rotateY(180deg); }
+.tc.is-flipped .tc-front, .tc.is-flipped .tc-back { visibility: visible; }
+.tc::before { backface-visibility: visible; }
+@media (prefers-reduced-motion: reduce) {
+  .tc { transition: none; }
+  .tc-front, .tc-back { backface-visibility: visible; }
+  .tc-back { transform: none; visibility: hidden; }
+  .tc.is-flipped { transform: none; }
+  .tc.is-flipped .tc-front { visibility: hidden; }
+  .tc.is-flipped .tc-back { visibility: visible; }
+}
+
+/* Testimonial as the success line */
+.happens-quote { margin-top: 40px; border-left: 2px solid var(--gold); padding-left: 22px; max-width: 760px; }
+.happens-quote p { font-size: clamp(20px, 2vw, 26px); line-height: 1.4; color: var(--white); margin-bottom: 12px; }
+.happens-quote cite { font-style: normal; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.06em; color: var(--muted); }
+
+/* Interactive arc */
+.arc-dot { cursor: pointer; outline: none; }
+.arc-dot circle { transition: fill 0.2s, transform 0.2s; transform-box: fill-box; transform-origin: center; }
+.arc-dot:hover circle, .arc-dot:focus-visible circle, .arc-dot.is-on circle { fill: var(--gold); transform: scale(1.18); }
+.arc-dot:hover text, .arc-dot:focus-visible text, .arc-dot.is-on text { fill: var(--bg); }
+.arc-dot:focus-visible circle { stroke: var(--bg); }
+.arc.js .arc-steps { display: none; }
+.arc-caption { margin-top: 28px; min-height: 96px; max-width: 520px; }
+.arc-caption .arc-n { display: block; margin-bottom: 4px; }
+.arc-caption h3 { font-family: var(--font-display); font-size: 34px; line-height: 1; margin-bottom: 8px; }
+.arc-caption p { font-size: 17px; line-height: 1.45; color: #2b3a2f; }
+.arc-hint { font-family: var(--font-mono); font-size: 12px; color: var(--muted-light); margin-top: 14px; }
+/* faces follow the card's own visibility, so hidden cards in the deck stay hidden */
+.tc-front, .tc-back, .tc.is-flipped .tc-front, .tc.is-flipped .tc-back { visibility: inherit; }
+@media (prefers-reduced-motion: reduce) {
+  .tc.is-active .tc-back { visibility: hidden; }
+  .tc.is-active.is-flipped .tc-back { visibility: visible; }
+  .tc.is-active.is-flipped .tc-front { visibility: hidden; }
+}

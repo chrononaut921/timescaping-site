@@ -70,16 +70,8 @@ requestAnimationFrame(() => {
   }
   const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function turn(card, flipped) {
-    if (still) { setFace(card, flipped); focusFace(card, flipped); return; }
-    card.classList.remove('turn-in');
-    card.classList.add('turn-out');
-    setTimeout(() => {
-      card.classList.remove('turn-out');
-      setFace(card, flipped);
-      void card.offsetWidth;
-      card.classList.add('turn-in');
-      focusFace(card, flipped);
-    }, 180);
+    setFace(card, flipped);
+    setTimeout(() => focusFace(card, flipped), still ? 0 : 320);
   }
   function focusFace(card, flipped) {
     const el = card.querySelector(flipped ? '.tc-unflip' : '.tc-flip');
@@ -281,4 +273,34 @@ requestAnimationFrame(() => {
     entries.forEach(e => { if (e.isIntersecting) { sec.classList.add('is-drawn'); io.disconnect(); } });
   }, { threshold: 0.35 });
   io.observe(sec);
+})();
+
+// Arc: hover, focus or tap a point to read that step
+(function () {
+  const arc = document.querySelector('.arc');
+  if (!arc) return;
+  const dots = Array.from(arc.querySelectorAll('.arc-dot'));
+  const items = Array.from(arc.querySelectorAll('.arc-steps li'));
+  const cap = arc.querySelector('.arc-caption');
+  if (!dots.length || !items.length || !cap) return;
+  arc.classList.add('js');
+  cap.hidden = false;
+  function activate(i) {
+    dots.forEach((d, j) => d.classList.toggle('is-on', j === i));
+    cap.innerHTML = items[i].innerHTML;
+  }
+  dots.forEach((d, i) => {
+    d.addEventListener('mouseenter', () => activate(i));
+    d.addEventListener('focus', () => activate(i));
+    d.addEventListener('click', () => activate(i));
+    d.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' && dots[i + 1]) { e.preventDefault(); dots[i + 1].focus(); }
+      if (e.key === 'ArrowLeft' && dots[i - 1]) { e.preventDefault(); dots[i - 1].focus(); }
+    });
+  });
+  activate(0);
+  const hint = document.createElement('p');
+  hint.className = 'arc-hint';
+  hint.textContent = 'Hover over or tap a point on the line.';
+  cap.after(hint);
 })();
