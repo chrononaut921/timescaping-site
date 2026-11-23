@@ -2032,3 +2032,7 @@ section[id], [id="take-part"], [id="from-2126"] { scroll-margin-top: 72px; }
 /* Session payoff line under the arc (23 Nov) */
 .arc-payoff { max-width: 640px; margin: 56px 0 0; padding-left: 18px; border-left: 2px solid var(--gold); font-size: 21px; line-height: 1.5; color: var(--text-dark); }
 @media (max-width: 720px) { .arc-payoff { margin-top: 40px; font-size: 18px; } }
+
+/* About aim line bigger (23 Nov) */
+.about-body .about-aim { font-size: 28px; line-height: 1.3; margin-top: 48px; padding-left: 24px; border-left-width: 3px; }
+@media (max-width: 720px) { .about-body .about-aim { font-size: 23px; margin-top: 36px; } }
