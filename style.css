@@ -1862,3 +1862,22 @@ section[id], [id="take-part"], [id="from-2126"] { scroll-margin-top: 72px; }
 }
 .wi-stage .wi-line3 { font-family: var(--font-mono); font-size: 15px; line-height: 1.4; }
 .wi-stage .wi-cursor { width: 0.55em; height: 1em; }
+
+/* Headline owns the hero; what-if becomes a smaller gold band */
+.hero-text-only .live-headline { font-size: clamp(3.6rem, 10.6vw, 11.5rem); max-width: none; line-height: 0.9; margin-bottom: 36px; }
+.wi.wi-stage { background: var(--gold); color: var(--bg); padding: 64px 0 60px; }
+.wi-stage .wi-line { font-size: clamp(32px, 3.8vw, 54px); min-height: 1.96em; color: var(--bg); }
+.wi-stage .wi-k1 { color: var(--bg); opacity: 0.55; }
+.wi-stage .wi-line2 { color: var(--bg); font-size: clamp(17px, 1.5vw, 20px); margin-top: 16px; min-height: 3em; }
+.wi-stage .wi-k2 { color: var(--bg); opacity: 0.6; }
+.wi-stage .wi-line3 { margin-top: 14px; }
+.wi-stage .wi-q { color: var(--bg); }
+.wi-stage .wi-cursor { background: var(--bg); }
+.wi-stage .wi-controls { margin-top: 24px; }
+.wi-stage .wi-see, .wi-stage .wi-pause { color: var(--bg); }
+.wi-stage .wi-see:hover, .wi-stage .wi-pause:hover { color: #000; }
+.wi-stage .wi-see:focus-visible, .wi-stage .wi-pause:focus-visible { outline-color: var(--bg); }
+@media (max-width: 900px) { .wi.wi-stage { padding: 48px 0 44px; } .wi-stage .wi-line { min-height: 0; } .wi-stage .wi-line2 { min-height: 0; } }
+.wi-stage .wi-line2 { min-height: 0; }
+.wi-stage .wi-line3 { margin-top: 18px; }
+.wi-stage .wi-controls { margin-top: 20px; }
