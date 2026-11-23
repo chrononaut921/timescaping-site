@@ -1915,3 +1915,39 @@ section[id], [id="take-part"], [id="from-2126"] { scroll-margin-top: 72px; }
   to { transform: none; opacity: 1; }
 }
 @media (prefers-reduced-motion: reduce) { .tc.is-in { animation: none; } }
+
+/* How a session goes: the arc from today to 2126 and back */
+.s-arc { background: var(--light); color: var(--text-dark); padding: 112px 0 104px; }
+.s-arc .section-headline { color: var(--text-dark); margin-bottom: 10px; }
+.arc-sub { color: var(--muted-light); font-size: 18px; margin-bottom: 48px; }
+.arc-svg { width: 100%; height: auto; display: block; overflow: visible; }
+.arc-guide { stroke: rgba(10,26,15,0.14); stroke-width: 1; stroke-dasharray: 3 6; }
+.arc-tag { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.08em; fill: var(--muted-light); }
+.arc-path { fill: none; stroke: var(--gold); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.arc-dot circle { fill: var(--bg); stroke: var(--light); stroke-width: 4; }
+.arc-dot text { font-family: var(--font-mono); font-size: 14px; fill: var(--gold); text-anchor: middle; }
+.arc-steps { list-style: none; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 24px; margin-top: 36px; }
+.arc-steps li { border-top: 1px solid rgba(10,26,15,0.15); padding-top: 16px; }
+.arc-n { font-family: var(--font-mono); font-size: 12px; color: #a9811f; }
+.arc-steps h3 { font-family: var(--font-display); font-size: 26px; line-height: 1; letter-spacing: 0.01em; margin: 6px 0 8px; }
+.arc-steps p { font-size: 15px; line-height: 1.45; color: #2b3a2f; }
+@media (prefers-reduced-motion: no-preference) {
+  .s-arc.js .arc-path { stroke-dasharray: 1; stroke-dashoffset: 1; }
+  .s-arc.js .arc-dot { opacity: 0; }
+  .s-arc.is-drawn .arc-path { stroke-dashoffset: 0; transition: stroke-dashoffset 2.4s cubic-bezier(.45,.05,.3,1); }
+  .s-arc.is-drawn .arc-dot { opacity: 1; transition: opacity 0.3s ease; transition-delay: calc(0.3s + var(--d) * 0.35s); }
+}
+@media (max-width: 900px) {
+  .s-arc { padding: 80px 0 72px; }
+  .arc-sub { margin-bottom: 28px; }
+  .arc-steps { grid-template-columns: 1fr 1fr; gap: 20px 16px; }
+  .arc-steps h3 { font-size: 22px; }
+}
+@media (max-width: 900px) {
+  .arc-path { stroke-width: 7; }
+  .arc-dot circle { r: 30px; stroke-width: 6; }
+  .arc-dot text { font-size: 30px; transform: translateY(5px); transform-box: fill-box; }
+  .arc-tag { font-size: 30px; }
+  .arc-guide { stroke-width: 2; }
+}
+@media (max-width: 900px) { .arc-tag { display: none; } }

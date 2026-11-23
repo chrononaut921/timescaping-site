@@ -271,3 +271,14 @@ requestAnimationFrame(() => {
     track.scrollBy({ left: Number(b.dataset.dir) * track.clientWidth * 0.75, behavior: still ? 'auto' : 'smooth' });
   }));
 })();
+
+// Session arc: draw the line from today to 2126 and back once, when it comes into view
+(function () {
+  const sec = document.querySelector('.s-arc');
+  if (!sec || !('IntersectionObserver' in window)) return;
+  sec.classList.add('js');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { sec.classList.add('is-drawn'); io.disconnect(); } });
+  }, { threshold: 0.35 });
+  io.observe(sec);
+})();
