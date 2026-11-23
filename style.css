@@ -1993,3 +1993,13 @@ section[id], [id="take-part"], [id="from-2126"] { scroll-margin-top: 72px; }
   .tc.is-active.is-flipped .tc-front { visibility: hidden; }
 }
 .happens-lead mark { background: none; color: var(--gold); }
+
+/* Host on dark so it separates from the arc; calmer ending */
+#host { background: var(--bg); }
+#host .section-headline { color: var(--white); }
+#host .s5-right p { color: #d9d1bf; }
+#host .btn-dark-ghost { color: var(--gold); border-color: var(--gold); }
+#host .btn-dark-ghost:hover { background: var(--gold); color: var(--bg); }
+.arc-caption { min-height: 0; }
+.s-arc { padding-bottom: 88px; }
+.s-cta .cta-bridge { font-size: clamp(22px, 2.4vw, 32px); line-height: 1.4; color: var(--white); max-width: 780px; margin: 0 auto; }
