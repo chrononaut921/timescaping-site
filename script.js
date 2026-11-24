@@ -299,8 +299,4 @@ requestAnimationFrame(() => {
     });
   });
   activate(0);
-  const hint = document.createElement('p');
-  hint.className = 'arc-hint';
-  hint.textContent = 'Hover over or tap a point on the line.';
-  cap.after(hint);
 })();
