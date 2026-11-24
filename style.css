@@ -2075,3 +2075,6 @@ section[id], [id="take-part"], [id="from-2126"] { scroll-margin-top: 72px; }
 .happens-proof .happens-quote p { font-size: 18px; line-height: 1.5; color: rgba(242,237,228,0.88); }
 .arc-sub { margin-bottom: 48px; }
 @media (max-width: 900px) { .happens-proof .happens-quotes { grid-template-columns: 1fr; gap: 28px; } .happens-proof { margin-top: 56px; } .proof-lead { margin-bottom: 32px; } }
+
+/* Card section cue line (24 Nov) */
+.s-card-cue { margin-top: 24px; max-width: 440px; font-size: 19px; color: var(--white); }
