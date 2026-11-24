@@ -2051,3 +2051,17 @@ section[id], [id="take-part"], [id="from-2126"] { scroll-margin-top: 72px; }
 .happens-quotes .happens-quote { margin: 0; border-left: 1px solid rgba(243,239,231,0.22); padding-left: 20px; max-width: none; }
 .happens-quotes .happens-quote p { font-size: 19px; line-height: 1.5; color: rgba(243,239,231,0.9); }
 @media (max-width: 760px) { .happens-quotes { grid-template-columns: 1fr; gap: 32px; margin-top: 48px; } .happens-text .happens-body { font-size: 17px; } }
+
+/* What happens: three ingredients, quotes after photos (24 Nov) */
+.happens-text { max-width: none; }
+.happens-text .happens-lead, .happens-text .happens-body { max-width: 760px; }
+.happens-trio { list-style: none; padding: 0; margin: 64px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; max-width: 1080px; }
+.happens-trio li { border-top: 1px solid var(--gold); padding-top: 20px; }
+.happens-trio h3 { font-family: var(--font-display); font-weight: 400; font-size: 30px; letter-spacing: 0.01em; line-height: 1; color: var(--white); margin: 0 0 12px; }
+.happens-trio p { font-size: 17px; line-height: 1.55; color: rgba(242,237,228,0.75); margin: 0; }
+.happens-quotes.section-inner { display: grid; grid-template-columns: repeat(2, minmax(0, 516px)); gap: 48px; margin-top: 72px; max-width: 1200px; justify-content: start; }
+@media (max-width: 760px) {
+  .happens-trio { grid-template-columns: 1fr; gap: 32px; margin-top: 44px; }
+  .happens-trio h3 { font-size: 26px; }
+  .happens-quotes.section-inner { grid-template-columns: 1fr; gap: 32px; margin-top: 48px; }
+}
