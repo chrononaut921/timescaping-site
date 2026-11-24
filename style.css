@@ -2043,3 +2043,11 @@ section[id], [id="take-part"], [id="from-2126"] { scroll-margin-top: 72px; }
 .arc-quote { margin: 0 0 48px; border-left: 2px solid var(--gold); padding-left: 18px; max-width: 640px; }
 .arc-quote p { font-size: 19px; line-height: 1.45; color: var(--text-dark); margin-bottom: 8px; }
 .arc-quote cite { font-style: normal; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.06em; color: var(--muted-light); }
+
+/* What happens, calmer (24 Nov) */
+.happens-text .happens-lead { margin-bottom: 32px; }
+.happens-text .happens-body { color: rgba(243,239,231,0.78); font-size: 19px; line-height: 1.6; margin-bottom: 16px; max-width: 680px; }
+.happens-quotes { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 64px; max-width: 1000px; }
+.happens-quotes .happens-quote { margin: 0; border-left: 1px solid rgba(243,239,231,0.22); padding-left: 20px; max-width: none; }
+.happens-quotes .happens-quote p { font-size: 19px; line-height: 1.5; color: rgba(243,239,231,0.9); }
+@media (max-width: 760px) { .happens-quotes { grid-template-columns: 1fr; gap: 32px; margin-top: 48px; } .happens-text .happens-body { font-size: 17px; } }
