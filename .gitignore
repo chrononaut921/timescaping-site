@@ -8,3 +8,4 @@ __MACOSX/
 # Thumbnails
 Thumbs.db
 _photos-inbox/
+_gen/

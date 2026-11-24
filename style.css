@@ -2078,3 +2078,36 @@ section[id], [id="take-part"], [id="from-2126"] { scroll-margin-top: 72px; }
 
 /* Card section cue line (24 Nov) */
 .s-card-cue { margin-top: 24px; max-width: 440px; font-size: 19px; color: var(--white); }
+
+/* Organisations page (24 Nov) */
+.hero-org .label { display: block; margin-bottom: 20px; }
+.hero-org .btn-ghost { margin-left: 12px; }
+.org-themes { margin-top: 56px; max-width: 1000px; }
+.org-themes .label { display: block; margin-bottom: 16px; }
+.org-theme-list { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 10px 12px; }
+.org-theme-list li { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(242,237,228,0.8); border: 1px solid rgba(242,237,228,0.2); padding: 7px 12px; }
+.org-theme-note { margin-top: 16px; font-size: 16px; color: rgba(242,237,228,0.7); }
+.org-formats-sec .section-headline { margin-bottom: 40px; }
+.org-formats { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; max-width: 1000px; }
+.org-format { border-top: 2px solid var(--gold); padding-top: 22px; }
+.org-format h3 { font-family: var(--font-display); font-weight: 400; font-size: 40px; line-height: 1; color: var(--text-dark); margin: 0 0 6px; }
+.org-format-time { display: block; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 14px; }
+.org-format p { font-size: 18px; line-height: 1.55; color: var(--text-dark); margin: 0; }
+.org-formats-note { margin-top: 40px; font-size: 16px; color: var(--muted-light); }
+.org-proof { padding-top: 96px; }
+.org-proof .happens-proof { margin-top: 0; }
+.org-quotes.happens-quotes { grid-template-columns: repeat(2, minmax(0, 520px)); }
+.org-proof .trusted { margin-top: 64px; }
+.org-host-where { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; color: var(--muted); margin-top: 20px; }
+.plan.plan-3 { grid-template-columns: repeat(3, 1fr); }
+.plan-cta .btn-ghost { margin: 0; }
+@media (max-width: 900px) {
+  .org-formats { grid-template-columns: 1fr; gap: 36px; }
+  .org-format h3 { font-size: 34px; }
+  .org-quotes.happens-quotes { grid-template-columns: 1fr; }
+  .plan.plan-3 { grid-template-columns: 1fr; }
+  .hero-org .btn-ghost { margin-left: 0; margin-top: 12px; }
+}
+.org-themes .org-theme-note { font-family: var(--font-body); text-transform: none; letter-spacing: normal; font-weight: 400; font-size: 16px; line-height: 1.5; color: rgba(242,237,228,0.7); }
+#contact .plan-cta .btn-ghost { color: var(--text-dark); border-color: var(--text-dark); }
+#contact .plan-cta .btn-ghost:hover { background: var(--text-dark); color: var(--light); }
