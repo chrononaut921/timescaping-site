@@ -2036,3 +2036,10 @@ section[id], [id="take-part"], [id="from-2126"] { scroll-margin-top: 72px; }
 /* About aim line bigger (23 Nov) */
 .about-body .about-aim { font-size: 28px; line-height: 1.3; margin-top: 48px; padding-left: 24px; border-left-width: 3px; }
 @media (max-width: 720px) { .about-body .about-aim { font-size: 23px; margin-top: 36px; } }
+
+/* Participant quotes (24 Nov) */
+.happens-quote-2 { margin-top: 28px; }
+.arc-sub { margin-bottom: 20px; }
+.arc-quote { margin: 0 0 48px; border-left: 2px solid var(--gold); padding-left: 18px; max-width: 640px; }
+.arc-quote p { font-size: 19px; line-height: 1.45; color: var(--text-dark); margin-bottom: 8px; }
+.arc-quote cite { font-style: normal; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.06em; color: var(--muted-light); }
