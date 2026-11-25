@@ -2115,3 +2115,15 @@ section[id], [id="take-part"], [id="from-2126"] { scroll-margin-top: 72px; }
 /* Organisations: made around your team (25 Nov) */
 .org-made-text { font-size: clamp(20px, 2.1vw, 26px); line-height: 1.55; color: var(--text-dark); max-width: 820px; margin: 0; }
 .org-formats-sec .org-formats-note { margin-top: 28px; }
+
+/* Organisations: what it brings (25 Nov) */
+.org-brings-sec .label { display: block; margin-bottom: 18px; }
+.org-brings-main { font-family: var(--font-display); font-size: clamp(36px, 4.6vw, 64px); line-height: 1.02; text-transform: uppercase; color: var(--text-dark); max-width: 900px; margin: 0 0 48px; }
+.org-brings-along { font-size: 18px; color: var(--muted-light); margin: 0 0 20px; }
+.org-brings { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px 40px; max-width: 1100px; }
+.org-brings li { border-top: 2px solid var(--gold); padding-top: 18px; }
+.org-brings h3 { font-family: var(--font-display); font-weight: 400; font-size: 28px; line-height: 1.05; color: var(--text-dark); margin: 0 0 10px; }
+.org-brings p { font-size: 17px; line-height: 1.55; color: var(--text-dark); margin: 0; }
+@media (max-width: 900px) { .org-brings { grid-template-columns: 1fr; gap: 28px; } }
+.org-brings-sec .section-inner { max-width: 1200px; padding-left: 100px; padding-right: 100px; }
+@media (max-width: 900px) { .org-brings-sec .section-inner { padding-left: 24px; padding-right: 24px; } }
