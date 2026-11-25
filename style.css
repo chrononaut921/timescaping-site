@@ -2127,3 +2127,6 @@ section[id], [id="take-part"], [id="from-2126"] { scroll-margin-top: 72px; }
 @media (max-width: 900px) { .org-brings { grid-template-columns: 1fr; gap: 28px; } }
 .org-brings-sec .section-inner { max-width: 1200px; padding-left: 100px; padding-right: 100px; }
 @media (max-width: 900px) { .org-brings-sec .section-inner { padding-left: 24px; padding-right: 24px; } }
+.org-brings-sec { background: var(--light-alt); }
+.org-brings-sec .section-inner { padding-left: 60px; padding-right: 60px; }
+@media (max-width: 900px) { .org-brings-sec .section-inner { padding-left: 24px; padding-right: 24px; } }
